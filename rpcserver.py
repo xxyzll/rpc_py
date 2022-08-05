@@ -50,7 +50,7 @@ class RPCServer(object):
 
     def run(self):
         try:
-            connections = {}; requests = {}; responses = {}
+            connections = {}; 
             error_events = [select.EPOLLERR, select.EPOLLHUP, select.EPOLLMSG]
             while True:
                 events = self.epoll.poll(-1)
